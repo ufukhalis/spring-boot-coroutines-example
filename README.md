@@ -41,3 +41,16 @@ Most important dependencies are related to `db` and `kotlin - reactor` ones.
     <artifactId>reactor-kotlin-extensions</artifactId>
 </dependency>
 ```
+
+Commands for requesting end-points
+
+```shell
+# Create person /v1/person/
+curl -XPOST -H "Content-type: application/json" -d '{
+ "fullName": "ufuk halis",
+  "age": 30
+}' 'http://localhost:8080/v1/person/'
+
+# List all persons /v1/person
+curl -XGET -H "Content-type: application/json" 'http://localhost:8080/v1/person/'
+```
